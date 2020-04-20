@@ -65,6 +65,10 @@ This project has a Dockerfile and docker-compose file to build all environment w
 
 `$ docker-compose up`
 
+The start.sh script, will execute all necessary setup to start the application, including rubocop and rspec:
+
+
+
 ## Running the tests manually
 
 If you would like to run tests manually, in a local installation, just run in your terminal (root project directory):

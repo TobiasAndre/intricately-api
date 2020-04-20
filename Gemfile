@@ -7,6 +7,9 @@ ruby "2.6.3"
 
 gem "active_model_serializers", "~> 0.10.10"
 gem "bootsnap", ">= 1.1.0", require: false
+gem "kaminari"
+gem "pager_api"
+gem "pagy"
 gem "pg", ">= 0.18", "< 2.0"
 gem "puma", "~> 3.11"
 gem "rails", "~> 5.2.4", ">= 5.2.4.2"
