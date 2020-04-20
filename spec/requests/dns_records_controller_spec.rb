@@ -27,4 +27,20 @@ RSpec.describe DnsRecordsController, type: :request do
       end
     end 
   end
+
+  describe "GET #index" do
+    context "when page parameter is missing" do
+      it "return unprocessable entity (422)" do
+        get "/dns_records", params: {}
+        expect(response).to have_http_status(422)
+      end
+    end
+
+    context "when page number parameter is present" do
+      it "return sucess (200)" do
+        get "/dns_records", params: { page: 1 }
+        expect(response).to have_http_status(200)
+      end
+    end
+  end
 end

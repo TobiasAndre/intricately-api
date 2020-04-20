@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/codefactory/intricately/intricately-api/app/models/dns_record.rb": {
+      "/app/app/models/dns_record.rb": {
         "lines": [
           null,
           null,
@@ -19,7 +19,7 @@
           null
         ]
       },
-      "/Users/codefactory/intricately/intricately-api/app/models/application_record.rb": {
+      "/app/app/models/application_record.rb": {
         "lines": [
           null,
           null,
@@ -28,7 +28,7 @@
           null
         ]
       },
-      "/Users/codefactory/intricately/intricately-api/spec/models/hostname_spec.rb": {
+      "/app/spec/models/hostname_spec.rb": {
         "lines": [
           null,
           null,
@@ -44,7 +44,7 @@
           null
         ]
       },
-      "/Users/codefactory/intricately/intricately-api/app/models/hostname.rb": {
+      "/app/app/models/hostname.rb": {
         "lines": [
           null,
           null,
@@ -53,7 +53,7 @@
           null
         ]
       },
-      "/Users/codefactory/intricately/intricately-api/spec/requests/dns_records_controller_spec.rb": {
+      "/app/spec/requests/dns_records_controller_spec.rb": {
         "lines": [
           null,
           null,
@@ -78,6 +78,22 @@
           null,
           null,
           null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
           1,
           1,
           1,
@@ -87,11 +103,21 @@
           null
         ]
       },
-      "/Users/codefactory/intricately/intricately-api/app/controllers/dns_records_controller.rb": {
+      "/app/app/controllers/dns_records_controller.rb": {
         "lines": [
           null,
           null,
           1,
+          null,
+          1,
+          2,
+          null,
+          1,
+          1,
+          null,
+          0,
+          null,
+          null,
           1,
           2,
           null,
@@ -115,6 +141,14 @@
           null,
           null,
           1,
+          2,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
           1,
           null,
           null,
@@ -123,7 +157,7 @@
           null
         ]
       },
-      "/Users/codefactory/intricately/intricately-api/app/controllers/application_controller.rb": {
+      "/app/app/controllers/application_controller.rb": {
         "lines": [
           null,
           null,
@@ -131,7 +165,7 @@
           null
         ]
       },
-      "/Users/codefactory/intricately/intricately-api/spec/services/dns_records/create_service_spec.rb": {
+      "/app/spec/services/dns_records/create_service_spec.rb": {
         "lines": [
           null,
           null,
@@ -168,7 +202,7 @@
           null
         ]
       },
-      "/Users/codefactory/intricately/intricately-api/app/services/dns_records/create_service.rb": {
+      "/app/app/services/dns_records/create_service.rb": {
         "lines": [
           null,
           null,
@@ -195,6 +229,6 @@
         ]
       }
     },
-    "timestamp": 1587377792
+    "timestamp": 1587382398
   }
 }

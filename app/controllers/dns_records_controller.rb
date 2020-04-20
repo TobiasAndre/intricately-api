@@ -1,6 +1,16 @@
 # frozen_string_literal: true
 
 class DnsRecordsController < ApplicationController
+
+  def index
+    return page_missing? if empty_page?
+
+    dns_records = DnsRecord.all.includes(:hostnames)
+    render json: dns_records
+  rescue StandardError => e
+    render status: :internal_server_error, json: { message: e.message }
+  end
+
   def create
     return params_missing? if empty_params?
 
@@ -14,6 +24,14 @@ class DnsRecordsController < ApplicationController
   end
 
   private
+
+  def empty_page?
+    params[:page].blank?
+  end
+
+  def page_missing?
+    render json: { message: "Page number parameter is required"}, status: :unprocessable_entity
+  end
 
   def empty_params?
     params[:dns_record].blank?
