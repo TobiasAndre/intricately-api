@@ -1,0 +1,55 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/codefactory/intricately/intricately-api/app/models/dns_record.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/codefactory/intricately/intricately-api/app/models/application_record.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/codefactory/intricately/intricately-api/spec/models/hostname_spec.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/codefactory/intricately/intricately-api/app/models/hostname.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      }
+    },
+    "timestamp": 1587374227
+  }
+}
