@@ -4,8 +4,7 @@ class DnsRecordsController < ApplicationController
   def index
     return page_missing? if empty_page?
 
-    dns_records = DnsRecord.all.includes(:hostnames)
-    paginate dns_records, per_page: 15
+    paginate dns_hosts.page(params[:page]).per(15)
   rescue StandardError => e
     render status: :internal_server_error, json: { message: e.message }
   end
@@ -15,7 +14,7 @@ class DnsRecordsController < ApplicationController
 
     dns_record = DnsRecords::CreateService.new(params: dns_hostname_params).call
 
-    render json: { id: dns_record.id }
+    render status: :created, json: { id: dns_record.id }
   rescue DnsRecords::CreateService::DnsRecordError => e
     render status: :unprocessable_entity, json: { message: e.message }
   rescue StandardError => e
@@ -23,6 +22,29 @@ class DnsRecordsController < ApplicationController
   end
 
   private
+
+  def dns_hosts
+    if empty_included_params?
+      DnsRecord.order(:id)
+    else
+      DnsRecord.filter_hostnames(included_hostnames_params,
+                                 excluded_hostnames_params)
+    end
+  end
+
+  def empty_included_params?
+    params[:included].blank?
+  end
+
+  def included_hostnames_params
+    params[:included].split(",")
+  end
+
+  def excluded_hostnames_params
+    return params[:excluded].split(",") if params[:excluded].present?
+
+    []
+  end
 
   def empty_page?
     params[:page].blank?

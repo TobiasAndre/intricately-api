@@ -24,10 +24,17 @@ curl --include --request POST http://localhost:3000/dns_records \
 
 ### Endpoint GET([http://localhost:3000/dns_records](http://localhost:3000/dns_records))
 
-## Retrive records from page 1
+## Retrive records from page 1 without included and excluded parameters
 
 ```bash
-curl --include --request GET http://localhost:3000/dns_records\?page\=1 \
+curl --location --request GET 'http://localhost:3000/dns_records?page=1'
+  --header "Content-Type: application/json"
+```
+
+## Retrive records from page 1 with included and excluded parameters
+
+```bash
+curl --location --request GET 'http://localhost:3000/dns_records?included=ipsum.com,dolor.com&excluded=sit.com&page=1'
   --header "Content-Type: application/json"
 ```
 
